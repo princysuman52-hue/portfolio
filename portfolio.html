@@ -1,0 +1,593 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>  Personal Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="portfolio.css">
+</head>
+
+<body>
+
+
+<header class="navbar">
+
+    <a href="#home" class="brand">
+        <span class="brand-ico"></span> Princy <span> Suman </span>
+       
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <nav id="navMenu">
+
+        <a href="#home" class="nav-link active">
+            <i class="fas fa-house"></i> Home
+        </a>
+
+        <a href="#about" class="nav-link">
+            <i class="fas fa-user"></i> About
+        </a>
+
+        <a href="#education" class="nav-link">
+            <i class="fas fa-graduation-cap"></i> Education
+        </a>
+
+        <a href="#skills" class="nav-link">
+            <i class="fas fa-gear"></i> Skills
+        </a>
+
+        <a href="#projects" class="nav-link">
+            <i class="fas fa-laptop"></i> Projects
+        </a>
+
+        <a href="#hobbies" class="nav-link">
+            <i class="fas fa-heart"></i> Hobbies
+        </a>
+
+        <a href="#achievements" class="nav-link">
+            <i class="fas fa-trophy"></i> Achievements
+        </a>
+
+        <a href="#contact" class="nav-link">
+            <i class="fas fa-envelope"></i> Contact
+        </a>
+
+        <button class="theme-toggle" id="themeToggle"
+                aria-label="Switch theme">
+            <i class="fas fa-sun"></i>
+            <span class="toggle-circle"></span>
+            <i class="fas fa-moon"></i>
+        </button>
+
+    </nav>
+
+</header>
+
+
+
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+      
+
+        <div class="profile-wrapper">
+
+            <div class="profile-border">
+                <img src=""
+                     alt="Princy Suman profile photo">
+            </div>
+
+            <span class="decoration decoration-one">✦</span>
+            <span class="decoration decoration-two">✧</span>
+
+        </div>
+
+
+       
+
+        <div class="hero-text">
+
+            <p class="intro">Hi, I'm</p>
+
+            <h1>
+               <span></span> Princy <span>Suman</span>
+            </h1>
+
+            <h2>First-Year Computer Science Student</h2>
+
+            <div class="small-line"></div>
+
+            <p class="welcome">
+                Welcome to my portfolio website!<br>
+                Explore my journey, skills and projects. 🚀
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#about" class="btn primary-btn">
+                    <i class="fas fa-user"></i>
+                    About Me →
+                </a>
+
+                <a href="#projects" class="btn outline-btn">
+                    <i class="fas fa-folder"></i>
+                    View Projects →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Laptop Illustration -->
+
+        <div class="hero-illustration">
+
+            <h3>Learn Today<br>to Lead Tomorrow</h3>
+
+            <div class="floating-icons">
+                <span class="html-icon">5</span>
+                <span class="css-icon">3</span>
+                <span class="js-icon">JS</span>
+            </div>
+
+            <img src="images/hero-laptop.png"
+                 alt="Laptop coding illustration">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT AND SKILLS ================= -->
+
+<section class="overview">
+
+    <!-- About Me Card -->
+
+    <div class="about-card" id="about">
+
+        <div class="about-image">
+            <img src="images/about-laptop.png"
+                 alt="Laptop and coding illustration">
+        </div>
+
+        <div class="about-content">
+
+            <h2 class="section-heading">
+                <i class="fas fa-user"></i> About Me
+            </h2>
+
+            <h3>A Passionate Web Developer</h3>
+
+            <p>
+                I'm Princy Suman, a First-Year Computer Science
+                student at BST. I love building web applications
+                and exploring new technologies.
+
+                My interests include coding, photography and gaming.
+                My goal is to become a skilled developer and
+                contribute to innovative projects.
+            </p>
+
+            <div class="about-details">
+
+                <div>
+                    <i class="fas fa-heart"></i>
+                    <span>
+                        <strong>Interests</strong>
+                        <small>Coding, Gaming</small>
+                    </span>
+                </div>
+
+                <div>
+                    <i class="fas fa-bullseye"></i>
+                    <span>
+                        <strong>Goal</strong>
+                        <small>Become a Full Stack Developer</small>
+                    </span>
+                </div>
+
+                <div>
+                    <i class="fas fa-star"></i>
+                    <span>
+                        <strong>Hobbies</strong>
+                        <small>Music, Travel</small>
+                    </span>
+                </div>
+
+            </div>
+
+            <a href="#education" class="btn primary-btn know-btn">
+                Know More →
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- Skills Card -->
+
+    <div class="skills-card" id="skills">
+
+        <h2 class="section-heading">
+            <i class="fas fa-gear"></i> My Skills
+        </h2>
+
+        <div class="skill-item">
+
+            <i class="fab fa-html5 html-color"></i>
+
+            <strong>HTML</strong>
+
+            <div class="progress">
+                <span style="width:90%"></span>
+            </div>
+
+            <span class="percentage">90%</span>
+
+        </div>
+
+
+        <div class="skill-item">
+
+            <i class="fab fa-css3-alt css-color"></i>
+
+            <strong>CSS</strong>
+
+            <div class="progress">
+                <span style="width:85%"></span>
+            </div>
+
+            <span class="percentage">85%</span>
+
+        </div>
+
+
+        <div class="skill-item">
+
+            <i class="fab fa-js js-color"></i>
+
+            <strong>JavaScript</strong>
+
+            <div class="progress">
+                <span style="width:80%"></span>
+            </div>
+
+            <span class="percentage">80%</span>
+
+        </div>
+
+
+        <div class="skill-item">
+
+            <i class="fab fa-python python-color"></i>
+
+            <strong>Python</strong>
+
+            <div class="progress">
+                <span style="width:75%"></span>
+            </div>
+
+            <span class="percentage">75%</span>
+
+        </div>
+
+
+        <div class="skill-item">
+
+            <i class="fas fa-users communication-color"></i>
+
+            <strong>Communication</strong>
+
+            <div class="progress">
+                <span style="width:85%"></span>
+            </div>
+
+            <span class="percentage">85%</span>
+
+        </div>
+
+
+        <div class="skill-item">
+
+            <i class="fas fa-handshake teamwork-color"></i>
+
+            <strong>Teamwork</strong>
+
+            <div class="progress">
+                <span style="width:90%"></span>
+            </div>
+
+            <span class="percentage">90%</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= NAVIGATION CARDS ================= -->
+
+<section class="quick-links">
+
+    <a href="#education" class="quick-card education-card">
+
+        <i class="fas fa-graduation-cap"></i>
+
+        <div>
+            <h3>Education</h3>
+            <p>My Academic Journey</p>
+        </div>
+
+        <i class="fas fa-arrow-circle-right arrow"></i>
+
+    </a>
+
+
+    <a href="#projects" class="quick-card projects-card">
+
+        <i class="fas fa-laptop"></i>
+
+        <div>
+            <h3>Projects</h3>
+            <p>My Work & Ideas</p>
+        </div>
+
+        <i class="fas fa-arrow-circle-right arrow"></i>
+
+    </a>
+
+
+    <a href="#hobbies" class="quick-card hobbies-card">
+
+        <i class="fas fa-heart"></i>
+
+        <div>
+            <h3>Hobbies</h3>
+            <p>My Interests</p>
+        </div>
+
+        <i class="fas fa-arrow-circle-right arrow"></i>
+
+    </a>
+
+
+    <a href="#achievements" class="quick-card achievements-card">
+
+        <i class="fas fa-trophy"></i>
+
+        <div>
+            <h3>Achievements</h3>
+            <p>My Milestones</p>
+        </div>
+
+        <i class="fas fa-arrow-circle-right arrow"></i>
+
+    </a>
+
+
+    <a href="#contact" class="quick-card contact-card">
+
+        <i class="fas fa-envelope"></i>
+
+        <div>
+            <h3>Contact</h3>
+            <p>Let's Connect</p>
+        </div>
+
+        <i class="fas fa-arrow-circle-right arrow"></i>
+
+    </a>
+
+</section>
+
+
+<!-- ================= EDUCATION ================= -->
+
+<section class="content-section" id="education">
+
+    <h2 class="main-heading">My Education</h2>
+
+    <div class="content-grid">
+
+        <div class="info-card">
+            <i class="fas fa-school"></i>
+            <h3>School Education</h3>
+            <p>Your School Name</p>
+            <p>Higher Secondary Education</p>
+            <span>Year: 2024</span>
+        </div>
+
+        <div class="info-card">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>College Education</h3>
+            <p>Your College Name</p>
+            <p>B.Tech - Computer Science</p>
+            <span>2026 - Present</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section class="content-section" id="projects">
+
+    <h2 class="main-heading">My Projects</h2>
+
+    <div class="content-grid">
+
+        <div class="info-card project-card">
+            <i class="fas fa-globe"></i>
+            <h3>Personal Portfolio</h3>
+            <p>A responsive website showcasing my skills and work.</p>
+            <span>HTML | CSS | JavaScript</span>
+        </div>
+
+        <div class="info-card project-card">
+            <i class="fas fa-code"></i>
+            <h3>Student Management System</h3>
+            <p>A project to manage student academic information.</p>
+            <span>Java | HTML | CSS</span>
+        </div>
+
+        <div class="info-card project-card">
+            <i class="fas fa-lightbulb"></i>
+            <h3>Mini Web Project</h3>
+            <p>A creative web application built during learning.</p>
+            <span>HTML | CSS | JavaScript</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= HOBBIES ================= -->
+
+<section class="content-section" id="hobbies">
+
+    <h2 class="main-heading">Hobbies & Interests</h2>
+
+    <div class="content-grid">
+
+        <div class="info-card">
+            <i class="fas fa-camera"></i>
+            <h3>Photography</h3>
+            <p>Capturing beautiful moments and memories.</p>
+        </div>
+
+        <div class="info-card">
+            <i class="fas fa-music"></i>
+            <h3>Music</h3>
+            <p>Listening to music and exploring new genres.</p>
+        </div>
+
+        <div class="info-card">
+            <i class="fas fa-plane"></i>
+            <h3>Travelling</h3>
+            <p>Exploring new places and cultures.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ACHIEVEMENTS ================= -->
+
+<section class="content-section" id="achievements">
+
+    <h2 class="main-heading">My Achievements</h2>
+
+    <div class="content-grid">
+
+        <div class="info-card">
+            <i class="fas fa-trophy"></i>
+            <h3>Hackathon Participation</h3>
+            <p>Participated in a technical hackathon.</p>
+            <span>2026</span>
+        </div>
+
+        <div class="info-card">
+            <i class="fas fa-certificate"></i>
+            <h3>Technical Workshop</h3>
+            <p>Completed a technical learning workshop.</p>
+            <span>2026</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="content-section contact-section" id="contact">
+
+    <h2 class="main-heading">Get In Touch</h2>
+
+    <p>Have a project or idea? Let's connect!</p>
+
+    <form id="contactForm">
+
+        <input type="text" id="name"
+               placeholder="Your Name" required>
+
+        <input type="email" id="email"
+               placeholder="Your Email" required>
+
+        <textarea id="message"
+                  placeholder="Your Message"
+                  required></textarea>
+
+        <button type="submit" class="btn primary-btn">
+            Send Message →
+        </button>
+
+        <p id="formStatus" role="status"></p>
+
+    </form>
+
+    <div class="social-links">
+
+        <a href="https://github.com/yourusername">
+            <i class="fab fa-github"></i> GitHub
+        </a>
+
+        <a href="https://linkedin.com/in/yourusername">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+
+        <a href="mailto:yourmail@gmail.com">
+            <i class="fas fa-envelope"></i> Email
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <h3>Princy suman </h3>
+
+    <p>Designed with ❤️ using HTML, CSS and JavaScript.</p>
+
+    <p>© 2026 All Rights Reserved.</p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
