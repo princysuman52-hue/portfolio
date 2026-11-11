@@ -1,7 +1,7 @@
 
-/* ===============================
-   GLOBAL STYLING
-================================ */
+/* =====================================
+   BLACK & PINK PORTFOLIO THEME
+===================================== */
 
 * {
     margin: 0;
@@ -11,22 +11,23 @@
 }
 
 :root {
-    --purple: #7135e8;
-    --purple-light: #a855f7;
-    --navy: #101331;
-    --text: #171b32;
-    --muted: #606579;
-    --white: #ffffff;
-    --page: #f7f7fc;
-    --card: #ffffff;
-    --border: #e5e4ef;
+    --black: #080808;
+    --dark: #111011;
+    --card: #181418;
+    --pink: #ff4fa3;
+    --pink-dark: #e83e8c;
+    --pink-light: #ffb6d5;
+    --text: #ffffff;
+    --muted: #b5aab1;
+    --border: #34232e;
+    --page: #0c0a0c;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
     background: var(--page);
     color: var(--text);
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 a {
@@ -39,9 +40,9 @@ button {
     cursor: pointer;
 }
 
-/* ===============================
+/* =====================================
    NAVIGATION BAR
-================================ */
+===================================== */
 
 .navbar {
     min-height: 75px;
@@ -50,8 +51,10 @@ button {
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    background: #101127;
-    color: white;
+
+    background: #0b090b;
+    border-bottom: 1px solid var(--border);
+
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -61,25 +64,25 @@ button {
     display: flex;
     align-items: center;
     gap: 12px;
-    font-size: 20px;
+    font-size: 21px;
     font-weight: 700;
     white-space: nowrap;
 }
 
 .brand-icon {
-    color: #a855f7;
+    color: var(--pink);
     font-size: 30px;
     font-weight: 800;
 }
 
 .purple {
-    color: #a855f7;
+    color: var(--pink);
 }
 
 .navbar nav {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 19px;
 }
 
 .nav-link {
@@ -87,64 +90,77 @@ button {
     align-items: center;
     gap: 7px;
     font-size: 12px;
+    color: #e5dce2;
     padding: 12px 0;
-    color: #e4e4f0;
     transition: 0.3s;
     white-space: nowrap;
 }
 
 .nav-link:hover,
 .nav-link.active {
-    color: #a855f7;
+    color: var(--pink);
 }
 
 .nav-link.active {
-    border-bottom: 3px solid #9148f6;
+    border-bottom: 3px solid var(--pink);
 }
 
-/* Theme Switch */
+/* Theme Toggle */
 
 .theme-toggle {
     display: flex;
     align-items: center;
     gap: 8px;
-    background: #292b4d;
-    border: 1px solid #444568;
     padding: 7px 10px;
+    background: #24151f;
+    border: 1px solid #603049;
     border-radius: 30px;
-    color: #fbd34d;
+    color: var(--pink);
 }
 
 .toggle-circle {
     width: 23px;
     height: 23px;
+    background: var(--pink);
     border-radius: 50%;
-    background: #a855f7;
-    box-shadow: 0 0 10px #a855f7;
+    box-shadow: 0 0 12px #ff4fa380;
 }
 
 .menu-toggle {
     display: none;
     background: transparent;
-    border: 0;
-    color: white;
+    border: none;
+    color: var(--pink);
     font-size: 23px;
 }
 
-/* ===============================
+/* =====================================
    HERO SECTION
-================================ */
+===================================== */
 
 .hero {
-    min-height: 330px;
-    background:
-        radial-gradient(circle at 5% 30%, #5820b5 0%, transparent 30%),
-        radial-gradient(circle at 90% 80%, #4620c7 0%, transparent 30%),
-        linear-gradient(120deg, #11112d, #071c4a 65%, #10123e);
-    color: white;
-    overflow: hidden;
+    min-height: 360px;
+    padding: 40px 5%;
     position: relative;
-    padding: 35px 5%;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 5% 40%,
+            #4a1536 0%,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            #561333 0%,
+            transparent 35%
+        ),
+        linear-gradient(
+            120deg,
+            #100b10,
+            #190e18,
+            #090909
+        );
 }
 
 .hero::before {
@@ -152,39 +168,45 @@ button {
     position: absolute;
     width: 400px;
     height: 400px;
-    background: #6c35ee;
-    opacity: 0.12;
-    filter: blur(100px);
-    right: 20%;
+    background: var(--pink);
+    opacity: 0.08;
+    filter: blur(110px);
+    right: 15%;
     top: -100px;
 }
 
 .hero-content {
     position: relative;
     z-index: 1;
+
     max-width: 1250px;
     margin: auto;
+
     display: grid;
     grid-template-columns: 270px 1fr 280px;
     align-items: center;
     gap: 30px;
 }
 
-/* Profile */
+/* Profile Image */
 
 .profile-wrapper {
-    position: relative;
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .profile-border {
     width: 220px;
     height: 255px;
     padding: 5px;
-    border-radius: 30px;
-    border: 3px solid #a855f7;
-    box-shadow: 0 0 25px #9c4dfc65;
+    border-radius: 28px;
+    border: 3px solid var(--pink);
+
+    box-shadow:
+        0 0 15px #ff4fa355,
+        0 0 40px #ff4fa322;
+
     overflow: hidden;
 }
 
@@ -193,12 +215,12 @@ button {
     height: 100%;
     object-fit: cover;
     object-position: center top;
-    border-radius: 24px;
+    border-radius: 22px;
 }
 
 .decoration {
     position: absolute;
-    color: #bb83ff;
+    color: var(--pink);
     font-size: 35px;
 }
 
@@ -212,7 +234,7 @@ button {
     right: 15px;
 }
 
-/* Hero Text */
+/* Hero Introduction */
 
 .hero-text .intro {
     font-size: 25px;
@@ -223,69 +245,74 @@ button {
     font-size: clamp(35px, 4vw, 55px);
     font-weight: 800;
     line-height: 1.2;
-    margin: 2px 0;
+    margin: 5px 0;
 }
 
 .hero-text h1 span {
-    background: linear-gradient(90deg, #a855f7, #7135e8);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: var(--pink);
 }
 
 .hero-text h2 {
-    font-size: 19px;
+    font-size: 18px;
     font-weight: 500;
 }
 
 .small-line {
     width: 75px;
     height: 3px;
-    background: #a855f7;
+    background: var(--pink);
     margin: 14px 0;
     border-radius: 5px;
 }
 
 .welcome {
+    color: #e5dce2;
     font-size: 15px;
     line-height: 1.7;
-    color: #e0e0f2;
 }
+
+/* Hero Buttons */
 
 .hero-buttons {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
-    margin-top: 20px;
+    margin-top: 22px;
 }
 
 .btn {
     display: inline-flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     gap: 10px;
+
     padding: 11px 20px;
     border-radius: 30px;
-    border: none;
     font-size: 13px;
     font-weight: 600;
+
     transition: 0.3s;
 }
 
 .primary-btn {
+    background: linear-gradient(
+        90deg,
+        #e83e8c,
+        #ff4fa3
+    );
     color: white;
-    background: linear-gradient(90deg, #8437e9, #a23eea);
+    border: 1px solid var(--pink);
 }
 
 .outline-btn {
-    color: white;
-    border: 1px solid white;
     background: transparent;
+    border: 1px solid var(--pink);
+    color: white;
 }
 
 .btn:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 20px #8734e955;
+    box-shadow: 0 7px 25px #ff4fa355;
 }
 
 /* Hero Illustration */
@@ -298,9 +325,9 @@ button {
 .hero-illustration h3 {
     font-size: 19px;
     font-style: italic;
+    color: var(--pink-light);
     transform: rotate(-5deg);
     margin-bottom: 15px;
-    color: #e5c5ff;
 }
 
 .hero-illustration img {
@@ -323,7 +350,6 @@ button {
     display: grid;
     place-items: center;
     font-weight: 800;
-    font-size: 15px;
     border-radius: 5px;
     transform: rotate(8deg);
 }
@@ -338,20 +364,22 @@ button {
 
 .js-icon {
     background: #f7df1e;
-    color: #222;
+    color: #111;
 }
 
-/* ===============================
-   ABOUT + SKILLS OVERVIEW
-================================ */
+/* =====================================
+   ABOUT & SKILLS OVERVIEW
+===================================== */
 
 .overview {
     max-width: 1400px;
     margin: auto;
-    padding: 25px 3%;
+    padding: 30px 3%;
+
     display: grid;
     grid-template-columns: 1.1fr 1fr;
-    gap: 20px;
+    gap: 22px;
+
     background: var(--page);
 }
 
@@ -359,12 +387,21 @@ button {
 .skills-card {
     background: var(--card);
     border: 1px solid var(--border);
-    border-radius: 15px;
-    padding: 20px;
+    border-radius: 17px;
+    padding: 22px;
     min-width: 0;
+
+    box-shadow: 0 5px 25px #00000030;
+    transition: 0.3s;
 }
 
-/* About */
+.about-card:hover,
+.skills-card:hover {
+    border-color: #78334f;
+    box-shadow: 0 5px 25px #ff4fa310;
+}
+
+/* About Card */
 
 .about-card {
     display: grid;
@@ -380,26 +417,29 @@ button {
 }
 
 .section-heading {
-    color: #7135e8;
+    color: var(--pink);
     font-size: 21px;
-    margin-bottom: 12px;
+    margin-bottom: 13px;
 }
 
 .about-content h3 {
     font-size: 17px;
-    margin-bottom: 7px;
+    margin-bottom: 8px;
+    color: white;
 }
 
 .about-content > p {
-    font-size: 13px;
-    line-height: 1.6;
     color: var(--muted);
+    font-size: 13px;
+    line-height: 1.7;
 }
+
+/* About Details */
 
 .about-details {
     display: flex;
     gap: 12px;
-    margin-top: 15px;
+    margin-top: 17px;
 }
 
 .about-details > div {
@@ -408,6 +448,7 @@ button {
     align-items: flex-start;
     min-width: 0;
     flex: 1;
+
     border-right: 1px solid var(--border);
 }
 
@@ -416,7 +457,7 @@ button {
 }
 
 .about-details i {
-    color: #8a45eb;
+    color: var(--pink);
     font-size: 17px;
 }
 
@@ -432,14 +473,14 @@ button {
 }
 
 .know-btn {
-    padding: 7px 15px;
-    margin-top: 12px;
+    padding: 8px 16px;
+    margin-top: 13px;
     font-size: 11px;
 }
 
-/* ===============================
-   SKILLS
-================================ */
+/* =====================================
+   SKILLS SECTION
+===================================== */
 
 .skills-card {
     display: flex;
@@ -452,7 +493,7 @@ button {
     grid-template-columns: 28px 112px minmax(50px, 1fr) 40px;
     align-items: center;
     gap: 10px;
-    margin: 8px 0;
+    margin: 9px 0;
 }
 
 .skill-item > i {
@@ -466,11 +507,12 @@ button {
 .percentage {
     font-size: 12px;
     text-align: right;
+    color: white;
 }
 
 .progress {
     height: 8px;
-    background: #e9e6f4;
+    background: #392c37;
     border-radius: 20px;
     overflow: hidden;
 }
@@ -479,7 +521,14 @@ button {
     display: block;
     height: 100%;
     border-radius: 20px;
-    background: linear-gradient(90deg, #8a36e9, #6633e5);
+
+    background: linear-gradient(
+        90deg,
+        #e83e8c,
+        #ff75b7
+    );
+
+    box-shadow: 0 0 10px #ff4fa355;
 }
 
 .html-color {
@@ -499,151 +548,146 @@ button {
 }
 
 .communication-color {
-    color: #349e86;
+    color: #ff70aa;
 }
 
 .teamwork-color {
-    color: #bc8840;
+    color: #d98bc0;
 }
 
-/* ===============================
+/* =====================================
    QUICK NAVIGATION CARDS
-================================ */
+===================================== */
 
 .quick-links {
     max-width: 1400px;
     margin: auto;
-    padding: 0 3% 30px;
+    padding: 0 3% 35px;
+
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 14px;
 }
 
 .quick-card {
-    min-height: 85px;
+    min-height: 90px;
     padding: 15px;
+
     display: flex;
     align-items: center;
-    gap: 13px;
+    gap: 12px;
+
+    background: #191419;
+    border: 1px solid var(--border);
     border-radius: 15px;
-    border: 1px solid transparent;
+
     transition: 0.3s;
 }
 
 .quick-card > i:first-child {
-    font-size: 30px;
+    font-size: 29px;
+    color: var(--pink);
 }
 
 .quick-card h3 {
-    font-size: 14px;
-    margin-bottom: 3px;
+    font-size: 13px;
+    color: white;
+    margin-bottom: 4px;
 }
 
 .quick-card p {
     font-size: 10px;
-    color: #50546a;
+    color: var(--muted);
 }
 
 .quick-card .arrow {
     font-size: 17px;
+    color: var(--pink);
     margin-left: auto;
 }
 
 .quick-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 8px 20px #25204415;
+    background: #291621;
+    border-color: var(--pink);
+
+    box-shadow: 0 8px 25px #ff4fa322;
 }
 
-.education-card {
-    background: #dcecff;
-    color: #2871bf;
-}
-
-.projects-card {
-    background: #dcf6e9;
-    color: #239d70;
-}
-
-.hobbies-card {
-    background: #ffe1ed;
-    color: #df4879;
-}
-
-.achievements-card {
-    background: #ffecd5;
-    color: #dd9a27;
-}
-
-.contact-card {
-    background: #edddff;
-    color: #8c43d9;
-}
-
-/* ===============================
-   OTHER CONTENT SECTIONS
-================================ */
+/* =====================================
+   EDUCATION, PROJECTS, HOBBIES
+===================================== */
 
 .content-section {
     padding: 65px 7%;
-    scroll-margin-top: 85px;
     background: var(--page);
+    scroll-margin-top: 85px;
 }
 
 .main-heading {
     text-align: center;
     font-size: 30px;
-    color: #7135e8;
-    margin-bottom: 30px;
+    color: var(--pink);
+    margin-bottom: 35px;
 }
 
 .content-grid {
     max-width: 1100px;
     margin: auto;
+
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(230px, 1fr)
+    );
+
+    gap: 22px;
 }
 
 .info-card {
     background: var(--card);
     border: 1px solid var(--border);
-    border-radius: 15px;
-    padding: 25px;
-    box-shadow: 0 5px 20px #17103308;
+    border-radius: 17px;
+    padding: 27px;
+
+    box-shadow: 0 5px 20px #00000030;
     transition: 0.3s;
 }
 
 .info-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 25px #7135e820;
+    transform: translateY(-7px);
+    border-color: var(--pink);
+
+    box-shadow: 0 10px 30px #ff4fa322;
 }
 
 .info-card > i {
-    color: #853ce7;
-    font-size: 30px;
-    margin-bottom: 15px;
+    font-size: 31px;
+    color: var(--pink);
+    margin-bottom: 16px;
 }
 
 .info-card h3 {
     font-size: 17px;
+    color: white;
     margin-bottom: 10px;
 }
 
 .info-card p {
-    color: var(--muted);
     font-size: 13px;
-    margin-bottom: 5px;
+    color: var(--muted);
+    margin-bottom: 7px;
 }
 
 .info-card span {
-    color: #8b48e8;
+    color: var(--pink);
     font-size: 12px;
     font-weight: 600;
 }
 
-/* ===============================
+/* =====================================
    CONTACT SECTION
-================================ */
+===================================== */
 
 .contact-section {
     text-align: center;
@@ -651,32 +695,37 @@ button {
 
 .contact-section > p {
     color: var(--muted);
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 }
 
 .contact-section form {
     max-width: 550px;
     margin: auto;
+
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 15px;
 }
 
 .contact-section input,
 .contact-section textarea {
     width: 100%;
     padding: 14px;
+
+    background: #191419;
+    color: white;
+
     border: 1px solid var(--border);
     border-radius: 10px;
+
     font-family: inherit;
-    background: var(--card);
-    color: var(--text);
     outline: none;
 }
 
 .contact-section input:focus,
 .contact-section textarea:focus {
-    border-color: #8b48e8;
+    border-color: var(--pink);
+    box-shadow: 0 0 10px #ff4fa322;
 }
 
 .contact-section textarea {
@@ -688,61 +737,71 @@ button {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 22px;
     margin-top: 30px;
 }
 
 .social-links a {
-    color: #7135e8;
-    font-weight: 600;
+    color: var(--pink);
     font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
-/* ===============================
+.social-links a:hover {
+    color: var(--pink-light);
+}
+
+/* =====================================
    FOOTER
-================================ */
+===================================== */
 
 footer {
     text-align: center;
     padding: 30px;
-    background: #101127;
+    background: #080708;
+    border-top: 1px solid var(--border);
     color: white;
 }
 
 footer h3 {
-    color: #a855f7;
+    color: var(--pink);
     margin-bottom: 8px;
 }
 
 footer p {
-    color: #c5c5d5;
+    color: var(--muted);
     font-size: 12px;
-    margin: 4px;
+    margin: 5px;
 }
 
-/* ===============================
-   DARK MODE
-================================ */
+/* =====================================
+   LIGHT MODE SUPPORT
+===================================== */
 
-body.dark {
-    --page: #10111b;
-    --card: #191b2a;
-    --text: #f5f4ff;
-    --muted: #b7b5c8;
-    --border: #303146;
+body.light {
+    --page: #fff5fa;
+    --card: #ffffff;
+    --text: #21141c;
+    --muted: #76636e;
+    --border: #f1c9dc;
 }
 
-body.dark .quick-card p {
-    color: #424052;
+body.light .about-content h3,
+body.light .info-card h3,
+body.light .quick-card h3,
+body.light .percentage {
+    color: #21141c;
 }
 
-body.dark .progress {
-    background: #343348;
+body.light .about-content > p,
+body.light .info-card p {
+    color: #76636e;
 }
 
-/* ===============================
+/* =====================================
    RESPONSIVE DESIGN
-================================ */
+===================================== */
 
 @media (max-width: 1100px) {
 
